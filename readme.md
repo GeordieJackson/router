@@ -17,7 +17,7 @@
 <li>Wildcards for dynamic matching. e.g. Route::get('post/{slug}', 'PostController@show');</li>
 <li>Add regex constraints to routes. e.g. Route::get('user/{id}', 'UserController@show')->where('id', '[0-9]+');</li>
 <li>Load routes from a directory - separate routes into several files.
-    * Named routes - with reverse lookup.</li>
+<li>Named routes - with reverse lookup.</li>
 <li>Route groups - with assignable prefix, namespace, name prefix and middleware.</li>
 <li>RESTful route creation from a single command. e.g. Route::resource('PostController').</li>
 </ul>
