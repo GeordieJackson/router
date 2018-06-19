@@ -20,13 +20,13 @@
 <li>RESTful route creation from a single command. e.g. Route::resource('PostController').</li>
 </ul>
 
-###Requirements
+<h3>Requirements</h3>
 
 PHP 7.1 or newer
 
-###Recommended
+<h3>Recommended</h3>
 
 A DI container for dependency management (Pimple, Aura, DI, Phalcon, etc.) 
 
 <h3>Documentation</h3>
-<p>Full documentation: <a href="http://johnjackson.me.uk/router" _target="_blank">Router docs</a></p>
+<p>Full documentation: <a href="http://johnjackson.me.uk/router" target="_blank">Router docs</a></p>
