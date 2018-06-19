@@ -1,3 +1,5 @@
+<p style="font-size: 2em; color: #f00;">Stability: Dev</p>
+
 <h1>A simple router with Laravel-style syntax</h1>
 
 `composer require GeordieJackson/router`
