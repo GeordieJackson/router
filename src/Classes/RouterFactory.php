@@ -15,7 +15,7 @@
          * @param string $dir
          * @return \GeordieJackson\Router\Classes\Router
          */
-        public static function create($dir = '')
+        public static function create($dir = null)
         {
             $dependencies = [
                 new Group(),

@@ -81,9 +81,11 @@
          * @param string $dir
          * @return $this
          */
-        public function load(string $dir)
+        public function load($dir = null)
         {
-            Route::load($this, $dir);
+            if($dir) {
+                Route::load($this, $dir);
+            }
 
             return $this;
         }

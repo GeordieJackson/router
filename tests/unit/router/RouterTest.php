@@ -167,4 +167,22 @@
             $route = $this->router->getRoute('GET', 'blog/{id}');
             $this->assertArrayHasKey('id',$route->getWhere());
         }
+
+        /**
+        * @test
+        */
+        public function it_loads_from_a_file()
+        {
+            $this->router->load(__DIR__ . "/../../test-routes");
+            $this->assertEquals("login", $this->router->getAllRoutes()['POST']["login"]->getPath() );
+        }
+
+        /**
+        * @test
+        */
+        public function it_returns_empty_array_when_load_dir_is_not_set()
+        {
+            $this->router->load();
+            $this->assertEmpty($this->router->getAllRoutes());
+        }
     }
