@@ -37,17 +37,6 @@
         /**
          * @test
          */
-        public function it_detects_and_returns_middleware_from_route()
-        {
-            $route = $this->route;
-            $route->setMiddleware('auth');
-            $middleware = $this->dispatcher->getMiddleware($route);
-            $this->assertEquals('auth', $middleware);
-        }
-
-        /**
-         * @test
-         */
         public function it_dispatches_a_callback()
         {
             $route = $this->route;

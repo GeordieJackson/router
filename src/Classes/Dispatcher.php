@@ -66,13 +66,4 @@
         {
             $this->container = $this->acclimator->acclimate($container);
         }
-
-        /**
-         * @param RouteInstance $route
-         * @return array
-         */
-        public function getMiddleware(RouteInstance $route)
-        {
-            return $route->getMiddleware();
-        }
     }
