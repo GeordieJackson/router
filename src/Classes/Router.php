@@ -83,7 +83,7 @@
          */
         public function load($dir = null)
         {
-            if($dir) {
+            if ($dir) {
                 Route::load($this, $dir);
             }
 

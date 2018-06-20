@@ -29,7 +29,7 @@
             $router = new Router(...$dependencies);
 
             if ($dir) {
-                return Route::load($router, $dir);
+                Route::load($router, $dir);
             }
 
             return $router;
