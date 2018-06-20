@@ -15,11 +15,11 @@
         protected static $router;
 
         /**
-         * @param \GeordieJackson\Router\Classes\Router $router
+         * @param \GeordieJackson\Router\Classes\RouterInstance $router
          * @param                                       $dir
          * @return mixed
          */
-        public static function load(Router $router, $dir)
+        public static function load(RouterInstance $router, $dir)
         {
             static::$router = $router;
             $files = array_diff(scandir($dir), ['.', '..']);

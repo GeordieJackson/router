@@ -3,7 +3,7 @@
     namespace router;
     
     use GeordieJackson\Router\Classes\RouteInstance;
-    use GeordieJackson\Router\Classes\RouterFactory;
+    use GeordieJackson\Router\Classes\Router;
 
     class GroupingsTest extends \Codeception\Test\Unit
     {
@@ -15,7 +15,7 @@
         
         protected function _before()
         {
-            $this->router = RouterFactory::create();
+            $this->router = Router::create();
         }
         
         protected function _after()

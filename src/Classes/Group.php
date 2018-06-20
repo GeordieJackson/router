@@ -42,7 +42,7 @@
         /**
          * @param $args
          */
-        public function build($args, Router $router)
+        public function build($args, RouterInstance $router)
         {
             $data = [];
             foreach ($args as $arg) {

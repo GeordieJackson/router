@@ -2,7 +2,7 @@
 
     namespace router;
 
-    use GeordieJackson\Router\Classes\RouterFactory;
+    use GeordieJackson\Router\Classes\Router;
 
     class NamespacingTest extends \Codeception\Test\Unit
     {
@@ -15,8 +15,8 @@
 
         protected function _before()
         {
-            $this->router = RouterFactory::create();
-            $this->routerWithRoutesLoaded = RouterFactory::create()
+            $this->router = Router::create();
+            $this->routerWithRoutesLoaded = Router::create()
                 ->setDefaultNamespace('GeordieJackson\Router\Http\Controllers')
                 ->load(__DIR__ . "/../../test-routes")
             ;

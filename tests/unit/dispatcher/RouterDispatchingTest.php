@@ -3,7 +3,7 @@
     namespace dispatcher;
 
     use GeordieJackson\Router\Classes\Dispatcher;
-    use GeordieJackson\Router\Classes\RouterFactory;
+    use GeordieJackson\Router\Classes\Router;
     use Acclimate\Container\ContainerAcclimator;
 
     class RouterDispatchingTest extends \Codeception\Test\Unit
@@ -15,7 +15,7 @@
 
         protected function _before()
         {
-            $this->router = RouterFactory::create();
+            $this->router = Router::create();
             $this->router->setDefaultNamespace('GeordieJackson\Router\Tests');
         }
 

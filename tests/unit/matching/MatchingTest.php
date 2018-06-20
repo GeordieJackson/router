@@ -2,7 +2,7 @@
     
     namespace matching;
     
-    use GeordieJackson\Router\Classes\RouterFactory;
+    use GeordieJackson\Router\Classes\Router;
     use GeordieJackson\Router\Exceptions\RouteNotMatchedException;
     use function is_callable;
 
@@ -13,7 +13,7 @@
         
         protected function _before()
         {
-            $this->router = RouterFactory::create();
+            $this->router = Router::create();
             
             $routes = [
                 'about-us' => 'PageController@about',

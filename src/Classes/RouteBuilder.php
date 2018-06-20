@@ -39,7 +39,7 @@
          * @param string $method
          * @return mixed
          */
-        public function build(string $path, $action, array $params, string $method, Router $router)
+        public function build(string $path, $action, array $params, string $method, RouterInstance $router)
         {
             $method = strtoupper($method);
             $path = $this->formatPath($path, $router);
@@ -60,7 +60,7 @@
          * @param $path
          * @return string
          */
-        protected function formatPath(string $path, Router $router) : string
+        protected function formatPath(string $path, RouterInstance $router) : string
         {
             $path = $path == '' ? "/" : $path;
 
@@ -99,7 +99,7 @@
          * @param $controller
          * @return string
          */
-        protected function buildNamespace(Router $router)
+        protected function buildNamespace(RouterInstance $router)
         {
             $namespace = null;
             if ($router->getDefaultNamespace()) {

@@ -14,7 +14,7 @@
         /**
          * @param $name
          */
-        public function addName($name, Router $router)
+        public function addName($name, RouterInstance $router)
         {
             if ( ! $routes = $router->getCurrentDetails()) {
                 return;
@@ -26,7 +26,7 @@
             }
         }
 
-        public function addNamespace($name, Router $router)
+        public function addNamespace($name, RouterInstance $router)
         {
             if ( ! $routes = $router->getCurrentDetails()) {
                 return;
@@ -44,7 +44,7 @@
         /**
          * @param $middleware
          */
-        public function addMiddleware($middleware, Router $router)
+        public function addMiddleware($middleware, RouterInstance $router)
         {
             if ( ! $routes = $router->getCurrentDetails()) {
                 return;
@@ -60,7 +60,7 @@
          * @param      $constraints
          * @param null $single
          */
-        public function addWhereClauses($constraints, $single = null, Router $router)
+        public function addWhereClauses($constraints, $single = null, RouterInstance $router)
         {
             if ( ! $routes = $router->getCurrentDetails()) {
                 return;
@@ -85,7 +85,7 @@
          * @return string
          * @throws \GeordieJackson\Router\Exceptions\RouteNotMatchedException
          */
-        public function url(string $name, array $params = [], Router $router)
+        public function url(string $name, array $params = [], RouterInstance $router)
         {
             if ( ! array_key_exists($name, $router->getNamedRoutes())) {
                 throw new RouteNotMatchedException("No route with tha name '$name' was found");

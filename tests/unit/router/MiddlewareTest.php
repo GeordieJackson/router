@@ -1,7 +1,7 @@
 <?php
 namespace router;
 
-use GeordieJackson\Router\Classes\RouterFactory;
+use GeordieJackson\Router\Classes\Router;
 
 class MiddlewareTest extends \Codeception\Test\Unit
 {
@@ -13,7 +13,7 @@ class MiddlewareTest extends \Codeception\Test\Unit
     
     protected function _before()
     {
-        $this->router = RouterFactory::create();
+        $this->router = Router::create();
     }
 
     protected function _after()

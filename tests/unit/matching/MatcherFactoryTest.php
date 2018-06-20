@@ -4,7 +4,7 @@
     
     use GeordieJackson\Router\Classes\DynamicMatcher;
     use GeordieJackson\Router\Classes\MatcherFactory;
-    use GeordieJackson\Router\Classes\RouterFactory;
+    use GeordieJackson\Router\Classes\Router;
     use GeordieJackson\Router\Classes\StaticMatcher;
 
     class MatcherFactoryTest extends \Codeception\Test\Unit
@@ -16,7 +16,7 @@
         
         protected function _before()
         {
-            $this->router = RouterFactory::create();
+            $this->router = Router::create();
             $this->matcherFactory = new MatcherFactory();
             $this->router->get('about-us', 'PagesController@about');
             $this->router->get('users/{id}', 'UsersController@show');

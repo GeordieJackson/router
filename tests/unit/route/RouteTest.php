@@ -3,7 +3,7 @@
     namespace route;
     
     use function count;
-    use GeordieJackson\Router\Classes\RouterFactory;
+    use GeordieJackson\Router\Classes\Router;
 
     class RouteTest extends \Codeception\Test\Unit
     {
@@ -18,7 +18,7 @@
         
         protected function _before()
         {
-            $this->router = RouterFactory::create($this->routesDirectory);
+            $this->router = Router::create($this->routesDirectory);
             $this->routes = $this->router->getAllRoutes();
             $this->namedRoutes = $this->router->getNamedRoutes();
         }

@@ -2,7 +2,7 @@
     
     namespace router;
     
-    use GeordieJackson\Router\Classes\RouterFactory;
+    use GeordieJackson\Router\Classes\Router;
 
     class UriTest extends \Codeception\Test\Unit
     {
@@ -15,7 +15,7 @@
         
         protected function _before()
         {
-            $this->router = RouterFactory::create();
+            $this->router = Router::create();
     
             $this->router->get('entry/{name}','BlogController@show')->where(['name' => 'a'])->name('blog-show');
             $this->router->get('blog/{name}','BlogController@show')->name('blog-show');

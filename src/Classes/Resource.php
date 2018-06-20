@@ -15,7 +15,7 @@
          * @param $path
          * @param $controller
          */
-        public function build($path, $controller, Router $router)
+        public function build($path, $controller, RouterInstance $router)
         {
             if (strpos($controller, "@")) {
                 throw new \InvalidArgumentException("A controller action should not be set on a resource: use ControllerName, not ControllerName@action ");
