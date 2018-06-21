@@ -62,10 +62,10 @@
          * @param Dispatcher $dispatcher
          */
         public function __construct(
-            $group,
-            $resource,
-            $routeBuilder,
-            $method,
+            Group $group,
+            Resource $resource,
+            RouteBuilder $routeBuilder,
+            Method $method,
             MatcherFactory $matcherFactory,
             Dispatcher $dispatcher
         ) {
