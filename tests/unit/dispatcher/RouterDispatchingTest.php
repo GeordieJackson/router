@@ -2,9 +2,7 @@
 
     namespace dispatcher;
 
-    use GeordieJackson\Router\Classes\Dispatcher;
     use GeordieJackson\Router\Classes\Router;
-    use Acclimate\Container\ContainerAcclimator;
 
     class RouterDispatchingTest extends \Codeception\Test\Unit
     {
