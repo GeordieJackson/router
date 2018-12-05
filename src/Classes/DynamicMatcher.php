@@ -102,7 +102,7 @@
             if ($whereValue && array_key_exists($route->getWhere($argKey), $this->pregMatchers)) {
                 $regex = $this->getPregMatcher($whereValue);
             } elseif (array_key_exists($argKey, $route->getWhere())) {
-                $regex = $route->getWhere()[$argKey];
+                $regex = $route->getWhere($argKey);
             } else {
                 $regex = $this->getPregMatcher('d'); // default
             }

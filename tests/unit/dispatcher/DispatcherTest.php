@@ -29,8 +29,6 @@
          */
         public function it_can_register_a_container_object()
         {
-            $container = new \stdClass();
-            $this->dispatcher->setContainer($container);
             $this->assertObjectHasAttribute('container', $this->dispatcher);
         }
 
