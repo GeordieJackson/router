@@ -2,6 +2,9 @@
 
     namespace GeordieJackson\Router\Classes;
 
+    use GeordieJackson\Collection\Arr;
+    use GeordieJackson\Collection\Collection;
+
     /**
      * Class RouteInstance
      *
@@ -236,13 +239,9 @@
         /**
          * @return array
          */
-        public function getArguments()
+        public function getArguments() : array
         {
-            $args = [];
-            foreach ($this->arguments as $k => $v) {
-                $args [] = $v;
-            }
-            return $args;
+            return Collection::make($this->arguments)->values()->toArray();
         }
 
         /**
@@ -250,7 +249,7 @@
          */
         public function setArguments($arguments) : void
         {
-            $this->arguments = $arguments ?? [];
+            $this->arguments = Arr::wrap($arguments);
         }
 
         /**

@@ -1,42 +1,43 @@
 {
-  "name": "GeordieJackson/router",
-  "description": "A simple router with Laravel style syntax",
-  "keywords": [
-    "router",
-    "routing",
-    "url",
-    "uri",
-    "matcher",
-    "dispatcher"
-  ],
-  "type": "package",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "John Jackson",
-      "email": "geordie@johnjackson.me.uk",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php": "^7.1.0",
-    "acclimate/container": "^2.0",
-    "doctrine/inflector": "^1.3"
-  },
-  "require-dev": {
-    "codeception/codeception": "^2.4",
-    "kint-php/kint": "^2.2"
-  },
-  "autoload": {
-    "psr-4": {
-      "GeordieJackson\\Router\\Classes\\": "src/Classes",
-      "GeordieJackson\\Router\\Exceptions\\": "src/Exceptions"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "GeordieJackson\\Router\\Tests\\": "tests/test-controllers"
-    }
-  },
-  "version": "0.2.0"
+	"name": "GeordieJackson/router",
+	"description": "A simple router with Laravel style syntax",
+	"keywords": [
+		"router",
+		"routing",
+		"url",
+		"uri",
+		"matcher",
+		"dispatcher"
+	],
+	"type": "package",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "John Jackson",
+			"email": "geordie@johnjackson.me.uk",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": "^7.1.0",
+		"acclimate/container": "^2.0",
+		"doctrine/inflector": "^1.3",
+		"geordiejackson/collection": "^1.0"
+	},
+	"require-dev": {
+		"codeception/codeception": "^2.4",
+		"kint-php/kint": "^2.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"GeordieJackson\\Router\\Classes\\": "src/Classes",
+			"GeordieJackson\\Router\\Exceptions\\": "src/Exceptions"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"GeordieJackson\\Router\\Tests\\": "tests/test-controllers"
+		}
+	},
+	"version": "0.2.0"
 }

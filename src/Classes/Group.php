@@ -53,10 +53,13 @@
                     $callback = $arg;
                 }
             }
+            
             $this->setGroupData($data);
+            
             if (isset($callback)) {
                 call_user_func($callback, $router);
             }
+            
             $this->resetGroupData();
         }
 

@@ -2,6 +2,7 @@
 
     namespace GeordieJackson\Router\Classes;
 
+    use GeordieJackson\Collection\Collection;
     use GeordieJackson\Router\Exceptions\RouteNotMatchedException;
 
     /**
@@ -16,14 +17,14 @@
          */
         public function addName($name, RouterInstance $router)
         {
-            if ( ! $routes = $router->getCurrentDetails()) {
+            if ( ! $routes = Collection::make($router->getCurrentDetails())) {
                 return;
             }
-
-            foreach ($routes as $route) {
+            
+            $routes->each(function($route) use($name, $router) {
                 $route->setName($router->getGroupData('name') . $name);
                 $router->addToNamedRoutes($route);
-            }
+            });
         }
 
         public function addNamespace($name, RouterInstance $router)
@@ -46,14 +47,14 @@
          */
         public function addMiddleware($middleware, RouterInstance $router)
         {
-            if ( ! $routes = $router->getCurrentDetails()) {
+            if ( ! $routes = Collection::make($router->getCurrentDetails())) {
                 return;
             }
-
-            foreach ($routes as $route) {
+            
+            $routes->map(function($route) use($middleware, $router) {
                 $route->setMiddleware(array_merge((array) $router->getGroupData('middleware'),
                     (array) $middleware));
-            }
+            });
         }
 
         /**
@@ -62,7 +63,7 @@
          */
         public function addWhereClauses($constraints, $single = null, RouterInstance $router)
         {
-            if ( ! $routes = $router->getCurrentDetails()) {
+            if ( ! $routes = Collection::make($router->getCurrentDetails())) {
                 return;
             }
 
@@ -73,10 +74,10 @@
             if ( ! is_array($constraints)) {
                 throw new \InvalidArgumentException("Arguments must be passed in via an array of ['key1' => 'value1', 'key2' => 'value2'] pairs or a single ('key', 'value') pair.");
             }
-
-            foreach ($routes as $route) {
+            
+            $routes->map(function($route) use ($constraints) {
                 $route->setWhere($constraints);
-            }
+            });
         }
 
         /**
