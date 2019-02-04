@@ -1,5 +1,5 @@
 {
-  "name": "GeordieJackson/router",
+  "name": "geordiejackson/router",
   "description": "A simple router with Laravel style syntax",
   "keywords": [
     "router",
@@ -37,6 +37,5 @@
     "psr-4": {
       "GeordieJackson\\Router\\Tests\\": "tests/test-controllers"
     }
-  },
-  "version": "0.2.0"
+  }
 }
